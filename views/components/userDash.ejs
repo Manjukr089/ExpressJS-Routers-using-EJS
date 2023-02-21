@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/home.css">
+
+</head>
+
+<body>
+    <%- include('./navbar.ejs') %>
+
+    <!-- <button><a href="/">Home</a></button>
+    <button><a href="/admin">Admin</a></button>
+    <button><a href="/users">Users</a></button> -->
+    <h1>Users Dashboard</h1>
+    <h1 style="color: red;">Books Data</h1>
+    <div class="books">
+
+        <% books.map(x=>{ %>
+            <div class="booksInfo">
+
+                <h1>
+                    <%= x.title %>
+                </h1>
+                <h1>
+                    <%= x.author %>
+                </h1>
+                <h1>
+                    <%= x.pages %>
+                </h1>
+            </div>
+
+            <% }) %>
+    </div>
+</body>
+
+</html>

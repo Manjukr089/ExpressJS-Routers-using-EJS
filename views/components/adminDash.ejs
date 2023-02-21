@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/home.css">
+
+</head>
+
+<body>
+    <%- include('./navbar.ejs') %>
+
+    <!-- <button><a href="/">Home</a></button>
+    <button><a href="/admin">Admin</a></button>
+    <button><a href="/users">Users</a></button> -->
+    <h1>Admin Dashboard</h1>
+    <h1 style="color: red;">Users Data</h1>
+    <div class="books">
+
+        <% adminData.map(x=> { %>
+            <div class="booksInfo">
+
+                <h1>Name :<%= x.name %>
+                </h1>
+                <h1>Id :<%= x.id %>
+                </h1>
+            </div>
+            <% }) %>
+    </div>
+    <br><br><br>
+    <h1 style="color: red;">Books Data</h1>
+    <div class="books">
+        <% books.map(x=>{ %>
+            <div class="booksInfo">
+                <h1>Title :<%= x.title %>
+                </h1>
+                <h1>Author :<%= x.author %>
+                </h1>
+                <h1>Pages :<%= x.pages %>
+                </h1>
+            </div>
+            <% }) %>
+    </div>
+</body>
+
+</html>
